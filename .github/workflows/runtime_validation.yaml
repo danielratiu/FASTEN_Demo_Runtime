@@ -1,0 +1,21 @@
+name: Trigger Target Workflow
+on:
+ workflow_dispatch:
+   inputs:
+     environment:
+       type: string
+       default: DEV
+       required: false
+ push:
+   branches:
+     - main
+jobs:
+ trigger-workflow:
+   runs-on: ubuntu-latest
+   steps:
+     - name: Trigger Workflow Dispatch
+       run: |
+         curl -X POST \
+           -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
+           https://api.github.com/repos/danielratiu/FASTEN_Demo/actions/workflows/verify_runtime/dispatches \
+           -d '{"ref": "test_validation"}'
