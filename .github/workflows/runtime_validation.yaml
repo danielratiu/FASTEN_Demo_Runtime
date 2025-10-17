@@ -18,4 +18,9 @@ jobs:
          curl -X POST \
            -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
            https://api.github.com/repos/danielratiu/FASTEN_Demo/dispatches \
-           -d '{"ref": "test_validation"}'
+           -d '{
+              "event_type": "custom_event",
+              "client_payload": {
+                "ref": "test_validation"
+              }
+            }'
