@@ -17,5 +17,5 @@ jobs:
        run: |
          curl -X POST \
            -H "Authorization: token ${{ secrets.PAT_TOKEN }}" \
-           https://api.github.com/repos/danielratiu/FASTEN_Demo/actions/workflows/verify_runtime/dispatches \
+           https://api.github.com/repos/danielratiu/FASTEN_Demo/dispatches \
            -d '{"ref": "test_validation"}'
