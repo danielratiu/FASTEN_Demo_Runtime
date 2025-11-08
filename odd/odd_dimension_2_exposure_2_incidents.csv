@@ -1,0 +1,11 @@
+# columns: odd_dimension, dimension_value, exposure in hours, incident_type, number_of_incident
+#
+# ODD dimension: "environment temperature" with values given as different intervals: [-10, 0), [0, 10), [10, 30),  [30, 50),  [50, 70)
+environment temperature, 0, 500, near collision, 1
+environment temperature, 10, 50000, near collision, 0
+environment temperature, 30, 10000, near collision, 2
+# 
+# ODD dimension: "country" with values fiven as string
+country, Romania, 150000, near collision, 5
+country, Sweden, 15000, near collision, 1
+country, Germany, 5000, near collision, 1
